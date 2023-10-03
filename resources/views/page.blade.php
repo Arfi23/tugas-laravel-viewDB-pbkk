@@ -1,3 +1,5 @@
+<!-- @dd(App\Models\GameInfo::all()) -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,24 +13,27 @@
             <thead>
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Developer</th>
+                    <th scope="col">Publisher</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Size</th>
                 </tr>
             </thead>
             <tbody>
+                <?php $count = 1; ?>
+                @foreach($games as $game)
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row">{{ $count++ }}</th>
+                    <td>{{ $game->title }}</td>
+                    <td>{{ $game->developer }}</td>
+                    <td>{{ $game->publisher }}</td>
+                    <td>{{ $game->release_date }}</td>
+                    <td>{{ $game->price }}</td>
+                    <td>{{ $game->size }}</td>
                 </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
+                @endforeach
             </tbody>
         </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
