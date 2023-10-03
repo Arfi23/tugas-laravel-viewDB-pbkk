@@ -1,5 +1,5 @@
 <!-- @dd(App\Models\GameInfo::all()) -->
-
+<!-- @dd($games); -->
 <!doctype html>
 <html lang="en">
   <head>
