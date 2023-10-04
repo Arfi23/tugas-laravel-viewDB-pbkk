@@ -1,5 +1,3 @@
-<!-- @dd(App\Models\GameInfo::all()) -->
-<!-- @dd($games); -->
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
+    <link rel="stylesheet" href="css/style.css">
+</head>
   <body>
-        <table class="table table-bordered">
+        <h3 class="mt-3 ms-2 text-white">Tabel Data Game</h3>
+        <table class="table table-bordered table-dark table-striped container mt-3">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">No</th>
                     <th scope="col">Title</th>
                     <th scope="col">Developer</th>
                     <th scope="col">Publisher</th>
                     <th scope="col">Release Date</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Size</th>
+                    <th scope="col">Price (in IDR)</th>
+                    <th scope="col">Size (in GB)</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="table-group-divider">
                 <?php $count = 1; ?>
                 @foreach($games as $game)
                 <tr>
