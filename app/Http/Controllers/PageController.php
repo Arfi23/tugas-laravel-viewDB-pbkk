@@ -23,6 +23,10 @@ class PageController extends Controller
                 Cache::put('game', $games, 60);
             }
         }
+
+        $time_end = microtime(true);
+        dd($time_end - $time_start);
+
         return view('page', [
             "games" => $games
         ]);
